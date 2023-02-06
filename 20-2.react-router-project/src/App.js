@@ -3,6 +3,7 @@ import AllQuotes from "./pages/AllQuotes";
 import QuoteDetail from "./pages/QuoteDetail";
 import NewQuote from "./pages/NewQuote";
 import Layout from "./components/layout/Layout";
+import NotFound from "./pages/NotFound";
 
 function App() {
     return (
@@ -19,6 +20,10 @@ function App() {
                 </Route>
                 <Route path="/new-quote">
                     <NewQuote></NewQuote>
+                </Route>
+                {/*The way the react-router-dom handles unsupported pages*/}
+                <Route path="*">
+                    <NotFound></NotFound>
                 </Route>
             </Switch>
         </Layout>
