@@ -3,7 +3,6 @@ import {Switch, Route, Redirect} from 'react-router-dom';
 import Layout from './components/Layout/Layout';
 import UserProfile from './components/Profile/UserProfile';
 import AuthPage from './pages/AuthPage';
-import HomePage from './pages/HomePage';
 import React, {useContext, Suspense} from "react";
 import AuthContext from "./store/auth-context";
 
