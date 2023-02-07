@@ -1,9 +1,14 @@
-import {useRef, useState} from 'react';
+import {useRef, useState, useContext} from 'react';
 import classes from './AuthForm.module.css';
+import AuthContext from "../../store/auth-context";
+import {useHistory} from "react-router-dom";
 
 const AuthForm = () => {
+    const history = useHistory();
     const emailInputRef = useRef();
     const passwordInputRef = useRef();
+
+    const authCtx = useContext(AuthContext);
 
     const [isLogin, setIsLogin] = useState(true);
     const [isLoading, setIsLoading] = useState(false);
@@ -43,7 +48,11 @@ const AuthForm = () => {
             setIsLoading(false);
             if (response.ok) {
                 const data = await response.json();
-                console.log(data)
+                const expirationTime = new Date((new Date().getTime() + (+data.expiresIn * 1000)));
+                authCtx.login(data.idToken);
+
+                //## 314. Redirection
+                history.replace('/');
             } else {
                 //## 310. Providing Feedback To User
                 let errMsg = 'Authentication Failed!';
