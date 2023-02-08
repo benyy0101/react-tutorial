@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkreact_complete_guide=self.webpackChunkreact_complete_guide||[]).push([[287],{287:function(e,n,t){t.r(n),t.d(n,{default:function(){return a}});var c="StartingPageContent_starting__MZ5Qn",r=t(184),u=function(){return(0,r.jsx)("section",{className:c,children:(0,r.jsx)("h1",{children:"Welcome on Board!"})})},a=function(){return(0,r.jsx)(u,{})}}}]);
+//# sourceMappingURL=287.37e93649.chunk.js.map
