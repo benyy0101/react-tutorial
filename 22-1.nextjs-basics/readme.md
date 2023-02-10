@@ -52,3 +52,8 @@ style은 넘어가기로 하고, public은 주로 빌드된 내용이 담기는 
 그럼 특정 아이디를 url로 받았을때 어떻게 뽑아내야 할까요? useRouter를 사용하면 쉽게 추출할 수 있습니다.
 useRouter().query. 그 다음 이름 [] 안에 있는 키를 붙이면 아이디를 쉽게 가져올 수 있습니다.
 
+### 339. Href or Link
+당연히 Next.js도 다른 페이지로 넘어 갈 수 있는 기능이 있습니다. react-router와 마찬가지로 Link 컴포넌트를 사용하면 되는데요, href props를 사용해야 합니다.
+html 기본태그인 a 태그를 사용하면, react-router에서 봤듯, 새로운 페이지를 요청하기 때문에, Link를 사용할 것을 추천합니다.
+
+
